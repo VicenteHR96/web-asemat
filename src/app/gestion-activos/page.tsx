@@ -164,7 +164,7 @@ export default function GestionActivosPage() {
             {/* Back to Home */}
             <Link
               href="/"
-              className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/80 border border-blue-200 mb-8 hover:bg-white transition-colors"
+              className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/80 border border-blue-200 mb-8 mr-3 hover:bg-white transition-colors"
             >
               <ArrowRight className="h-4 w-4 rotate-180 text-blue-600" />
               <span className="text-sm font-medium text-gray-600">Volver al inicio</span>
@@ -283,7 +283,7 @@ export default function GestionActivosPage() {
       </section>
 
       {/* Challenges Section */}
-      <section className="py-24 bg-white">
+      <section id="desafios" className="py-24 bg-white">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid lg:grid-cols-2 gap-16 items-center">
             <div>
@@ -373,7 +373,7 @@ export default function GestionActivosPage() {
       </section>
 
       {/* Methodology Section */}
-      <section className="py-24 bg-gradient-to-br from-blue-50 via-cyan-50 to-white">
+      <section id="metodologia" className="py-24 bg-gradient-to-br from-blue-50 via-cyan-50 to-white">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center max-w-3xl mx-auto mb-16">
             <h2 className="text-4xl sm:text-5xl font-bold text-gray-900 mb-6">
