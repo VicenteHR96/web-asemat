@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import Image from 'next/image';
 import { Mail, Phone, MapPin, Linkedin } from 'lucide-react';
 
 const footerLinks = {
@@ -22,22 +23,14 @@ export default function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12">
           {/* Company Info */}
           <div className="lg:col-span-1">
-            <Link href="/" className="flex items-center space-x-2 mb-6">
-              <svg
-                viewBox="0 0 40 40"
-                className="h-10 w-10"
-                fill="none"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path
-                  d="M20 5L35 15V30L20 35L5 30V15L20 5Z"
-                  stroke="#0EA5E9"
-                  strokeWidth="2"
-                  fill="none"
-                />
-                <path d="M12 20L18 26L28 14" stroke="#10B981" strokeWidth="2.5" />
-              </svg>
-              <span className="text-2xl font-bold text-white">ASEMAT</span>
+            <Link href="/" className="flex items-center mb-6">
+              <Image
+                src="/asemat_logo_blanco.png"
+                alt="ASEMAT"
+                width={160}
+                height={45}
+                className="h-11 w-auto"
+              />
             </Link>
             <p className="text-gray-400 mb-6 leading-relaxed">
               Ingeniería que integra proyectos con las operaciones. Especialistas

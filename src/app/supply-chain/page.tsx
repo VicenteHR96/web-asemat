@@ -193,7 +193,7 @@ export default function SupplyChainPage() {
             <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-gradient-to-r from-emerald-500/10 to-teal-500/10 border border-emerald-200 mb-8">
               <Package className="h-4 w-4 text-emerald-600" />
               <span className="text-sm font-medium text-emerald-700">
-                Supply Chain
+                Gestión de Materiales
               </span>
             </div>
 
@@ -491,7 +491,7 @@ export default function SupplyChainPage() {
         <div className="relative z-10 container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-4xl mx-auto text-center">
             <h2 className="text-4xl sm:text-5xl font-bold text-white mb-6">
-              ¿Listo para Optimizar su Supply Chain?
+              ¿Listo para Optimizar su Gestión de Materiales?
             </h2>
             <p className="text-xl text-emerald-100 mb-10 max-w-2xl mx-auto">
               Contáctenos para una consultoría personalizada y descubra cómo podemos
