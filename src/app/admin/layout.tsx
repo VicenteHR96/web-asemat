@@ -1,6 +1,9 @@
-import { redirect } from 'next/navigation';
 import { auth } from '@/lib/auth';
 import AdminSidebar from '@/components/admin/AdminSidebar';
+
+export const metadata = {
+  title: 'Admin | ASEMAT',
+};
 
 export default async function AdminLayout({
   children,
@@ -9,24 +12,22 @@ export default async function AdminLayout({
 }) {
   const session = await auth();
 
-  // Si no hay sesión y no estamos en la página de login, redirigir
-  const isLoginPage =
-    typeof window !== 'undefined' && window.location.pathname === '/admin/login';
-
-  if (!session && !isLoginPage) {
-    // Permitir acceso a la página de login sin sesión
-    return <>{children}</>;
-  }
-
+  // Allow access to login page without session
   if (!session) {
-    return <>{children}</>;
+    return (
+      <div className="min-h-screen bg-gradient-to-br from-slate-50 via-gray-50 to-slate-100">
+        {children}
+      </div>
+    );
   }
 
   return (
-    <div className="min-h-screen bg-gray-100">
+    <div className="min-h-screen bg-gradient-to-br from-slate-50 via-gray-50 to-slate-100">
       <AdminSidebar user={session.user} />
       <div className="lg:pl-64">
-        <main className="py-6 px-4 sm:px-6 lg:px-8">{children}</main>
+        {/* Mobile top padding for fixed header */}
+        <div className="lg:hidden h-14" />
+        <main className="p-4 sm:p-6 lg:p-8">{children}</main>
       </div>
     </div>
   );

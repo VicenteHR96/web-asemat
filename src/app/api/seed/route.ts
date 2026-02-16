@@ -1,4 +1,5 @@
 import { NextResponse } from 'next/server';
+import bcrypt from 'bcryptjs';
 import dbConnect from '@/lib/mongodb';
 import User from '@/models/User';
 import Article from '@/models/Article';
@@ -7,17 +8,22 @@ export async function GET() {
   try {
     await dbConnect();
 
-    // Crear usuario admin si no existe
-    const existingAdmin = await User.findOne({ email: 'admin@asemat.cl' });
+    // Eliminar usuario admin existente y crear uno nuevo como superadmin
+    await User.deleteOne({ email: 'admin@asemat.cl' });
 
-    if (!existingAdmin) {
-      await User.create({
-        email: 'admin@asemat.cl',
-        password: 'admin123',
-        name: 'Administrador',
-        role: 'admin',
-      });
-    }
+    // Hashear la contraseña manualmente
+    const salt = await bcrypt.genSalt(10);
+    const hashedPassword = await bcrypt.hash('admin123', salt);
+
+    // Crear usuario superadmin directamente en la colección
+    await User.collection.insertOne({
+      email: 'admin@asemat.cl',
+      password: hashedPassword,
+      name: 'Administrador',
+      role: 'superadmin',
+      createdAt: new Date(),
+      updatedAt: new Date(),
+    });
 
     // Crear artículos de ejemplo si no existen
     const articleCount = await Article.countDocuments();
@@ -64,6 +70,7 @@ export async function GET() {
       admin: {
         email: 'admin@asemat.cl',
         password: 'admin123',
+        role: 'superadmin',
       },
     });
   } catch (error) {
