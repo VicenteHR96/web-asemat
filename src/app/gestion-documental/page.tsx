@@ -31,7 +31,7 @@ const services = [
       "Reportes de avance y estatus documental",
       "Administración de plataformas documentales (Aconex, Procore, SharePoint)",
     ],
-    gradient: "from-blue-500 to-cyan-500",
+    gradient: "from-violet-500 to-purple-500",
   },
   {
     id: "vendors",
@@ -46,7 +46,7 @@ const services = [
       "Gestión de comentarios y ciclos de revisión",
       "Reportes de cumplimiento por vendor",
     ],
-    gradient: "from-cyan-500 to-teal-500",
+    gradient: "from-purple-500 to-fuchsia-500",
   },
   {
     id: "conformidad",
@@ -61,7 +61,7 @@ const services = [
       "Validación cruzada contra estándares del proyecto",
       "Informe de brechas con recomendaciones de cierre",
     ],
-    gradient: "from-violet-500 to-purple-500",
+    gradient: "from-indigo-500 to-violet-500",
   },
   {
     id: "traspaso",
@@ -76,7 +76,7 @@ const services = [
       "As-Built verificados y organizados",
       "Acta de traspaso con índice de completitud",
     ],
-    gradient: "from-emerald-500 to-teal-500",
+    gradient: "from-fuchsia-500 to-pink-500",
   },
   {
     id: "digitalizacion",
@@ -91,7 +91,7 @@ const services = [
       "Estructura de biblioteca técnica por planta o proyecto",
       "Migración a plataformas de gestión documental",
     ],
-    gradient: "from-purple-500 to-pink-500",
+    gradient: "from-purple-500 to-indigo-500",
   },
 ];
 
@@ -246,7 +246,7 @@ export default function GestionDocumentalPage() {
                   href={`#${s.id}`}
                   className={`text-sm font-medium whitespace-nowrap transition-colors duration-500 ${
                     activeSection === s.id
-                      ? "text-blue-600"
+                      ? "text-violet-600"
                       : "text-gray-400 hover:text-gray-600"
                   }`}
                 >
@@ -263,34 +263,34 @@ export default function GestionDocumentalPage() {
         id="hero"
         className="relative min-h-[90vh] flex items-center overflow-hidden"
       >
-        <div className="absolute inset-0 bg-gradient-to-br from-blue-50 via-cyan-50 to-white">
-          <div className="absolute top-20 left-10 w-[600px] h-[600px] bg-gradient-to-br from-blue-400/30 to-cyan-400/20 rounded-full blur-[100px]" />
-          <div className="absolute bottom-20 right-10 w-[500px] h-[500px] bg-gradient-to-br from-cyan-400/30 to-teal-400/20 rounded-full blur-[100px]" />
-          <div className="absolute inset-0 bg-[linear-gradient(rgba(14,165,233,.03)_1px,transparent_1px),linear-gradient(90deg,rgba(14,165,233,.03)_1px,transparent_1px)] bg-[size:60px_60px]" />
+        <div className="absolute inset-0 bg-gradient-to-br from-violet-50 via-purple-50 to-white">
+          <div className="absolute top-20 left-10 w-[600px] h-[600px] bg-gradient-to-br from-violet-400/30 to-purple-400/20 rounded-full blur-[100px]" />
+          <div className="absolute bottom-20 right-10 w-[500px] h-[500px] bg-gradient-to-br from-purple-400/30 to-fuchsia-400/20 rounded-full blur-[100px]" />
+          <div className="absolute inset-0 bg-[linear-gradient(rgba(139,92,246,.03)_1px,transparent_1px),linear-gradient(90deg,rgba(139,92,246,.03)_1px,transparent_1px)] bg-[size:60px_60px]" />
         </div>
 
         <div className="relative z-10 container mx-auto px-4 sm:px-6 lg:px-8 py-20">
           <div className="max-w-5xl mx-auto text-center">
             <Link
               href="/"
-              className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/80 border border-blue-200 mb-8 mr-3 hover:bg-white transition-colors"
+              className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/80 border border-violet-200 mb-8 mr-3 hover:bg-white transition-colors"
             >
-              <ArrowRight className="h-4 w-4 rotate-180 text-blue-600" />
+              <ArrowRight className="h-4 w-4 rotate-180 text-violet-600" />
               <span className="text-sm font-medium text-gray-600">
                 Volver al inicio
               </span>
             </Link>
 
-            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-gradient-to-r from-blue-500/10 to-cyan-500/10 border border-blue-200 mb-8">
-              <FileText className="h-4 w-4 text-blue-600" />
-              <span className="text-sm font-medium text-blue-700">
+            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-gradient-to-r from-violet-500/10 to-purple-500/10 border border-violet-200 mb-8">
+              <FileText className="h-4 w-4 text-violet-600" />
+              <span className="text-sm font-medium text-violet-700">
                 Línea de Negocio
               </span>
             </div>
 
             <h1 className="text-5xl sm:text-6xl lg:text-7xl font-bold text-gray-900 mb-6 leading-tight">
               Gestión{" "}
-              <span className="bg-gradient-to-r from-blue-600 via-cyan-600 to-teal-600 bg-clip-text text-transparent">
+              <span className="bg-gradient-to-r from-violet-600 via-purple-600 to-fuchsia-600 bg-clip-text text-transparent">
                 Documental
               </span>
             </h1>
@@ -308,14 +308,14 @@ export default function GestionDocumentalPage() {
             <div className="flex flex-col sm:flex-row justify-center gap-4">
               <Link
                 href="#servicios"
-                className="group inline-flex items-center justify-center px-8 py-4 bg-gradient-to-r from-blue-600 to-cyan-600 text-white font-semibold rounded-xl shadow-lg shadow-blue-500/25 hover:shadow-xl hover:shadow-blue-500/30 transition-all duration-300"
+                className="group inline-flex items-center justify-center px-8 py-4 bg-gradient-to-r from-violet-600 to-purple-600 text-white font-semibold rounded-xl shadow-lg shadow-violet-500/25 hover:shadow-xl hover:shadow-violet-500/30 transition-all duration-300"
               >
                 Explorar servicios
                 <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
               </Link>
               <Link
                 href="/contacto"
-                className="inline-flex items-center justify-center px-8 py-4 bg-white/80 backdrop-blur-sm border border-blue-200 text-gray-700 font-semibold rounded-xl hover:bg-white transition-all duration-300"
+                className="inline-flex items-center justify-center px-8 py-4 bg-white/80 backdrop-blur-sm border border-violet-200 text-gray-700 font-semibold rounded-xl hover:bg-white transition-all duration-300"
               >
                 Conversemos
               </Link>
@@ -333,7 +333,7 @@ export default function GestionDocumentalPage() {
             </p>
             <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-4 leading-tight">
               Lo que enfrenta un Gerente de{" "}
-              <span className="bg-gradient-to-r from-blue-600 to-cyan-600 bg-clip-text text-transparent">
+              <span className="bg-gradient-to-r from-violet-600 to-purple-600 bg-clip-text text-transparent">
                 Control Documental
               </span>
             </h2>
@@ -356,9 +356,9 @@ export default function GestionDocumentalPage() {
                       {item.pain}
                     </p>
                   </div>
-                  <div className="w-full h-px bg-gradient-to-r from-blue-200 to-transparent mb-5" />
+                  <div className="w-full h-px bg-gradient-to-r from-violet-200 to-transparent mb-5" />
                   <div>
-                    <p className="text-xs font-medium text-cyan-600 tracking-widest uppercase mb-3">
+                    <p className="text-xs font-medium text-purple-600 tracking-widest uppercase mb-3">
                       Nuestra respuesta
                     </p>
                     <p className="text-sm text-gray-500 leading-relaxed">
@@ -384,7 +384,7 @@ export default function GestionDocumentalPage() {
             </p>
             <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-4 leading-tight">
               Qué hacemos en{" "}
-              <span className="bg-gradient-to-r from-blue-600 to-cyan-600 bg-clip-text text-transparent">
+              <span className="bg-gradient-to-r from-violet-600 to-purple-600 bg-clip-text text-transparent">
                 Gestión Documental
               </span>
             </h2>
@@ -402,7 +402,7 @@ export default function GestionDocumentalPage() {
                     key={svc.id}
                     className={`bg-white border rounded-2xl overflow-hidden transition-all duration-300 cursor-pointer ${
                       isOpen
-                        ? "border-blue-200 shadow-lg"
+                        ? "border-violet-200 shadow-lg"
                         : "border-gray-100 hover:border-gray-200 hover:shadow-md"
                     }`}
                     onClick={() =>
@@ -423,7 +423,7 @@ export default function GestionDocumentalPage() {
                         </h3>
                         <p
                           className={`text-sm ${
-                            isOpen ? "text-cyan-600" : "text-gray-400"
+                            isOpen ? "text-purple-600" : "text-gray-400"
                           } font-medium transition-colors`}
                         >
                           {svc.subtitle}
@@ -457,7 +457,7 @@ export default function GestionDocumentalPage() {
                                 key={j}
                                 className="flex items-start gap-3"
                               >
-                                <CheckCircle className="h-4 w-4 text-cyan-600 flex-shrink-0 mt-0.5" />
+                                <CheckCircle className="h-4 w-4 text-purple-600 flex-shrink-0 mt-0.5" />
                                 <span className="text-sm text-gray-600">
                                   {d}
                                 </span>
@@ -484,7 +484,7 @@ export default function GestionDocumentalPage() {
             </p>
             <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-4 leading-tight">
               Presentes en cada fase del{" "}
-              <span className="bg-gradient-to-r from-blue-600 to-cyan-600 bg-clip-text text-transparent">
+              <span className="bg-gradient-to-r from-violet-600 to-purple-600 bg-clip-text text-transparent">
                 proyecto
               </span>
             </h2>
@@ -507,14 +507,14 @@ export default function GestionDocumentalPage() {
                     <div
                       className={`w-3 h-3 rounded-full flex-shrink-0 ${
                         i === lifecycle.length - 1
-                          ? "bg-gradient-to-r from-blue-600 to-cyan-600 shadow-md shadow-blue-500/30"
-                          : "bg-blue-200"
+                          ? "bg-gradient-to-r from-violet-600 to-purple-600 shadow-md shadow-violet-500/30"
+                          : "bg-violet-200"
                       }`}
                     />
                     <span
                       className={`text-sm font-semibold ${
                         i === lifecycle.length - 1
-                          ? "bg-gradient-to-r from-blue-600 to-cyan-600 bg-clip-text text-transparent"
+                          ? "bg-gradient-to-r from-violet-600 to-purple-600 bg-clip-text text-transparent"
                           : "text-gray-700"
                       }`}
                     >
@@ -546,7 +546,7 @@ export default function GestionDocumentalPage() {
             </p>
             <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-14 leading-tight">
               Nuestro enfoque de{" "}
-              <span className="bg-gradient-to-r from-blue-600 to-cyan-600 bg-clip-text text-transparent">
+              <span className="bg-gradient-to-r from-violet-600 to-purple-600 bg-clip-text text-transparent">
                 intervención
               </span>
             </h2>
@@ -560,7 +560,7 @@ export default function GestionDocumentalPage() {
                   <span className="text-3xl font-bold text-gray-200 tracking-tight block mb-4">
                     {m.step}
                   </span>
-                  <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-blue-500 to-cyan-500 flex items-center justify-center mb-5 shadow-lg">
+                  <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-violet-500 to-purple-500 flex items-center justify-center mb-5 shadow-lg">
                     <m.icon className="h-6 w-6 text-white" />
                   </div>
                   <h3 className="text-lg font-bold text-gray-900 mb-2">
@@ -582,7 +582,7 @@ export default function GestionDocumentalPage() {
           <div className="grid grid-cols-2 lg:grid-cols-4 gap-8 max-w-5xl mx-auto">
             {stats.map((s, i) => (
               <div key={i} className="text-center">
-                <div className="text-3xl sm:text-4xl font-bold bg-gradient-to-r from-blue-600 to-cyan-600 bg-clip-text text-transparent mb-2 tracking-tight">
+                <div className="text-3xl sm:text-4xl font-bold bg-gradient-to-r from-violet-600 to-purple-600 bg-clip-text text-transparent mb-2 tracking-tight">
                   {s.value}
                 </div>
                 <p className="text-sm text-gray-400 leading-relaxed">
@@ -598,12 +598,12 @@ export default function GestionDocumentalPage() {
       <section className="py-20 bg-gradient-to-b from-white to-gray-50">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-3xl mx-auto text-center">
-            <div className="w-12 h-0.5 bg-gradient-to-r from-blue-600 to-cyan-600 mx-auto mb-10" />
+            <div className="w-12 h-0.5 bg-gradient-to-r from-violet-600 to-purple-600 mx-auto mb-10" />
             <blockquote className="text-xl sm:text-2xl font-medium text-gray-900 leading-relaxed mb-6">
               Un proyecto no está cerrado cuando se firma el acta.
               <br />
               Está cerrado cuando{" "}
-              <span className="bg-gradient-to-r from-blue-600 to-cyan-600 bg-clip-text text-transparent font-bold">
+              <span className="bg-gradient-to-r from-violet-600 to-purple-600 bg-clip-text text-transparent font-bold">
                 operaciones puede trabajar con lo que recibió
               </span>
               .
@@ -632,7 +632,7 @@ export default function GestionDocumentalPage() {
             </p>
 
             <div className="grid md:grid-cols-2 gap-8">
-              <div className="bg-gradient-to-br from-blue-600 via-cyan-600 to-teal-600 rounded-3xl p-10 relative overflow-hidden">
+              <div className="bg-gradient-to-br from-violet-600 via-purple-600 to-fuchsia-600 rounded-3xl p-10 relative overflow-hidden">
                 <div className="absolute inset-0 opacity-20">
                   <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top_right,_var(--tw-gradient-stops))] from-white/20 via-transparent to-transparent" />
                 </div>
@@ -704,7 +704,7 @@ export default function GestionDocumentalPage() {
 
       {/* CTA Section */}
       <section className="py-24 relative overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-br from-blue-600 via-cyan-600 to-teal-600" />
+        <div className="absolute inset-0 bg-gradient-to-br from-violet-600 via-purple-600 to-fuchsia-600" />
         <div className="absolute inset-0 opacity-20">
           <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-white/20 via-transparent to-transparent" />
         </div>
@@ -714,14 +714,14 @@ export default function GestionDocumentalPage() {
             <h2 className="text-3xl sm:text-4xl font-bold text-white mb-6">
               ¿Tiene un proyecto con deuda documental?
             </h2>
-            <p className="text-lg text-blue-100 mb-10 max-w-2xl mx-auto leading-relaxed">
+            <p className="text-lg text-violet-100 mb-10 max-w-2xl mx-auto leading-relaxed">
               Ya sea que necesite controlar la documentación de un proyecto en
               curso, preparar un traspaso operacional o cerrar la brecha
               documental acumulada — conversemos.
             </p>
             <Link
               href="/contacto"
-              className="group inline-flex items-center px-10 py-5 bg-white text-blue-600 text-lg font-semibold rounded-xl shadow-2xl hover:shadow-3xl transition-all duration-300"
+              className="group inline-flex items-center px-10 py-5 bg-white text-violet-600 text-lg font-semibold rounded-xl shadow-2xl hover:shadow-3xl transition-all duration-300"
             >
               Contactar ahora
               <ArrowRight className="ml-3 h-6 w-6 group-hover:translate-x-1 transition-transform" />
