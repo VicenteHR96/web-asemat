@@ -268,7 +268,13 @@ export default function SupplyChainPage() {
         id="hero"
         className="relative min-h-[90vh] flex items-center overflow-hidden"
       >
-        <div className="absolute inset-0 bg-gradient-to-br from-emerald-50 via-teal-50 to-white">
+        {/* Background image */}
+        <div
+          className="absolute inset-0 bg-cover bg-center grayscale opacity-[.18]"
+          style={{ backgroundImage: "url('/images/materiales.jpg')" }}
+        />
+        {/* Gradient overlay */}
+        <div className="absolute inset-0 bg-gradient-to-br from-emerald-50/60 via-teal-50/50 to-white/65">
           <div className="absolute top-20 left-10 w-[600px] h-[600px] bg-gradient-to-br from-emerald-400/30 to-teal-400/20 rounded-full blur-[100px]" />
           <div className="absolute bottom-20 right-10 w-[500px] h-[500px] bg-gradient-to-br from-teal-400/30 to-green-400/20 rounded-full blur-[100px]" />
           <div className="absolute inset-0 bg-[linear-gradient(rgba(16,185,129,.03)_1px,transparent_1px),linear-gradient(90deg,rgba(16,185,129,.03)_1px,transparent_1px)] bg-[size:60px_60px]" />
@@ -337,7 +343,7 @@ export default function SupplyChainPage() {
               El desafío
             </p>
             <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-4 leading-tight">
-              Lo que enfrenta un Gerente de{" "}
+              Lo que enfrenta una Gerencia de{" "}
               <span className="bg-gradient-to-r from-emerald-600 to-teal-600 bg-clip-text text-transparent">
                 Abastecimiento
               </span>

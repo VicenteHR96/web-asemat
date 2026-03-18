@@ -106,7 +106,7 @@ const painPoints = [
       "Planes RCM desarrollados equipo por equipo, con FMECA, criticidad operacional y frecuencias optimizadas con criterio técnico-económico",
   },
   {
-    pain: "Proyectos que llegan a operación sin documentación de mantenibilidad lista para usar",
+    pain: "Proyectos que llegan a operación sin documentación de mantenimiento lista para usar",
     solution:
       "Intervención desde las fases tempranas del proyecto para asegurar que los entregables de mantenimiento estén completos antes del traspaso",
   },
@@ -288,7 +288,7 @@ export default function GestionActivosPage() {
             </h1>
 
             <p className="text-xs font-medium text-gray-400 tracking-widest uppercase mb-6">
-              Mantenibilidad · Confiabilidad · Implementación ERP
+              Mantenibilidad · Confiabilidad
             </p>
 
             <p className="text-xl text-gray-600 mb-10 leading-relaxed max-w-3xl mx-auto">
@@ -324,7 +324,7 @@ export default function GestionActivosPage() {
               El desafío
             </p>
             <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-4 leading-tight">
-              Lo que enfrenta un Gerente de{" "}
+              Lo que enfrenta una Gerencia de{" "}
               <span className="bg-gradient-to-r from-blue-600 to-cyan-600 bg-clip-text text-transparent">
                 Mantenimiento y Confiabilidad
               </span>

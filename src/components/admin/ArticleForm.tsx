@@ -6,6 +6,7 @@ import { Save, ArrowLeft, Eye, EyeOff } from 'lucide-react';
 import Button from '@/components/ui/Button';
 import Input from '@/components/ui/Input';
 import Textarea from '@/components/ui/Textarea';
+import TiptapEditor from '@/components/admin/TiptapEditor';
 import Link from 'next/link';
 
 interface ArticleFormProps {
@@ -197,15 +198,17 @@ export default function ArticleForm({
               placeholder="Breve descripción del artículo (máx. 500 caracteres)"
               className="min-h-[100px]"
             />
-            <Textarea
-              label="Contenido"
-              name="content"
-              value={formData.content}
-              onChange={handleChange}
-              required
-              placeholder="Contenido completo del artículo (soporta Markdown)"
-              className="min-h-[300px]"
-            />
+            <div>
+              <label className="block text-sm font-medium text-gray-700 mb-1">
+                Contenido
+              </label>
+              <TiptapEditor
+                content={formData.content}
+                onChange={(html) =>
+                  setFormData((prev) => ({ ...prev, content: html }))
+                }
+              />
+            </div>
           </div>
         </div>
 

@@ -2,7 +2,7 @@
 
 import { useState } from 'react';
 import { Metadata } from 'next';
-import { Mail, Phone, MapPin, Send, Clock, CheckCircle } from 'lucide-react';
+import { Mail, Phone, MapPin, Send, CheckCircle } from 'lucide-react';
 import Button from '@/components/ui/Button';
 import Input from '@/components/ui/Input';
 import Textarea from '@/components/ui/Textarea';
@@ -23,14 +23,8 @@ const contactInfo = [
   {
     icon: MapPin,
     title: 'Ubicación',
-    value: 'Valparaíso, Chile',
-    href: '#',
-  },
-  {
-    icon: Clock,
-    title: 'Horario',
-    value: 'Lun - Vie: 9:00 - 18:00',
-    href: '#',
+    value: '12 Norte 785, Edificio Pamplona, Oficina 605, Viña del Mar',
+    href: 'https://www.google.com/maps/search/Edificio+Pamplona+12+Norte+785,+Viña+del+Mar,+Chile',
   },
 ];
 
@@ -271,16 +265,20 @@ export default function ContactoPage() {
               Nuestra Ubicación
             </h2>
             <p className="text-gray-600">
-              Ubicados en Valparaíso, Chile, con alcance en toda Latinoamérica.
+              12 Norte 785, Edificio Pamplona, Oficina 605, Viña del Mar, Chile.
             </p>
           </div>
-          <div className="bg-gray-200 rounded-2xl h-96 flex items-center justify-center">
-            <div className="text-center">
-              <MapPin className="h-12 w-12 text-gray-400 mx-auto mb-4" />
-              <p className="text-gray-600">
-                Valparaíso, Región de Valparaíso, Chile
-              </p>
-            </div>
+          <div className="rounded-2xl overflow-hidden h-96">
+            <iframe
+              src="https://www.google.com/maps?q=-33.0109,-71.5481&z=17&output=embed"
+              width="100%"
+              height="100%"
+              style={{ border: 0 }}
+              allowFullScreen
+              loading="lazy"
+              referrerPolicy="no-referrer-when-downgrade"
+              title="Ubicación Asemat - 12 Norte 785, Edificio Pamplona, Oficina 605, Viña del Mar"
+            />
           </div>
         </div>
       </section>
