@@ -269,10 +269,10 @@ export default function SupplyChainPage() {
         className="relative min-h-[90vh] flex items-center overflow-hidden"
       >
         {/* Background image */}
-        <div
+        {/* <div
           className="absolute inset-0 bg-cover bg-center grayscale opacity-[.18]"
           style={{ backgroundImage: "url('/images/materiales.jpg')" }}
-        />
+        /> */}
         {/* Gradient overlay */}
         <div className="absolute inset-0 bg-gradient-to-br from-emerald-50/60 via-teal-50/50 to-white/65">
           <div className="absolute top-20 left-10 w-[600px] h-[600px] bg-gradient-to-br from-emerald-400/30 to-teal-400/20 rounded-full blur-[100px]" />

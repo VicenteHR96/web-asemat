@@ -254,10 +254,10 @@ export default function GestionActivosPage() {
       {/* Hero Section */}
       <section id="hero" className="relative min-h-[90vh] flex items-center overflow-hidden">
         {/* Background image — grayscale, low opacity */}
-        <div
+        {/* <div
           className="absolute inset-0 bg-cover bg-center grayscale opacity-[.18]"
           style={{ backgroundImage: "url('/images/activos.jpg')" }}
-        />
+        /> */}
         {/* Gradient overlay */}
         <div className="absolute inset-0 bg-gradient-to-br from-blue-50/60 via-cyan-50/50 to-white/65">
           <div className="absolute top-20 left-10 w-[600px] h-[600px] bg-gradient-to-br from-blue-400/30 to-cyan-400/20 rounded-full blur-[100px]" />

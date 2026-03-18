@@ -264,10 +264,10 @@ export default function GestionDocumentalPage() {
         className="relative min-h-[90vh] flex items-center overflow-hidden"
       >
         {/* Background image */}
-        <div
+        {/* <div
           className="absolute inset-0 bg-cover bg-center grayscale opacity-[.18]"
           style={{ backgroundImage: "url('/images/documental.jpeg')" }}
-        />
+        /> */}
         {/* Gradient overlay */}
         <div className="absolute inset-0 bg-gradient-to-br from-violet-50/60 via-purple-50/50 to-white/65">
           <div className="absolute top-20 left-10 w-[600px] h-[600px] bg-gradient-to-br from-violet-400/30 to-purple-400/20 rounded-full blur-[100px]" />
