@@ -53,7 +53,7 @@ const services = [
     title: "Optimización de Inventario",
     subtitle: "Nivel de servicio con capital óptimo",
     description:
-      "Determinamos cuánto tener de cada material, dónde almacenarlo y cuándo reponerlo. El objetivo es claro: que el repuesto esté disponible cuando se necesite, sin enterrar capital en bodega.",
+      "Determinamos cuánto tener de cada material, dónde almacenarlo y cuándo reponerlo. El objetivo es claro: que el repuesto esté disponible cuando se necesite, sin capital inmovilizado en bodega.",
     deliverables: [
       "Política de inventario por categoría (Min/Max, ROP, EOQ)",
       "Análisis de obsolescencia y slow-movers",
@@ -268,7 +268,13 @@ export default function SupplyChainPage() {
         id="hero"
         className="relative min-h-[90vh] flex items-center overflow-hidden"
       >
-        <div className="absolute inset-0 bg-gradient-to-br from-emerald-50 via-teal-50 to-white">
+        {/* Background image */}
+        <div
+          className="absolute inset-0 bg-cover bg-center grayscale opacity-[.18]"
+          style={{ backgroundImage: "url('/images/materiales.jpg')" }}
+        />
+        {/* Gradient overlay */}
+        <div className="absolute inset-0 bg-gradient-to-br from-emerald-50/60 via-teal-50/50 to-white/65">
           <div className="absolute top-20 left-10 w-[600px] h-[600px] bg-gradient-to-br from-emerald-400/30 to-teal-400/20 rounded-full blur-[100px]" />
           <div className="absolute bottom-20 right-10 w-[500px] h-[500px] bg-gradient-to-br from-teal-400/30 to-green-400/20 rounded-full blur-[100px]" />
           <div className="absolute inset-0 bg-[linear-gradient(rgba(16,185,129,.03)_1px,transparent_1px),linear-gradient(90deg,rgba(16,185,129,.03)_1px,transparent_1px)] bg-[size:60px_60px]" />
@@ -305,7 +311,7 @@ export default function SupplyChainPage() {
             </p>
 
             <p className="text-xl text-gray-600 mb-10 leading-relaxed max-w-3xl mx-auto">
-              Repuestos disponibles sin capital enterrado. Soluciones End-to-End
+              Repuestos disponibles sin capital inmovilizado. Soluciones End-to-End
               para optimizar su cadena de suministros, asegurando el nivel de
               servicio con el inventario óptimo.
             </p>
@@ -337,7 +343,7 @@ export default function SupplyChainPage() {
               El desafío
             </p>
             <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-4 leading-tight">
-              Lo que enfrenta un Gerente de{" "}
+              Lo que enfrenta una Gerencia de{" "}
               <span className="bg-gradient-to-r from-emerald-600 to-teal-600 bg-clip-text text-transparent">
                 Abastecimiento
               </span>
@@ -610,7 +616,7 @@ export default function SupplyChainPage() {
               <br />
               Es la base para que{" "}
               <span className="bg-gradient-to-r from-emerald-600 to-teal-600 bg-clip-text text-transparent font-bold">
-                compras compre bien, bodega almacene bien, y mantenimiento
+                adquisiciones compre bien, bodega almacene bien, y mantenimiento
                 ejecute bien
               </span>
               .
@@ -633,9 +639,7 @@ export default function SupplyChainPage() {
               Dos formas de trabajar con nosotros
             </h2>
             <p className="text-base text-gray-500 leading-relaxed max-w-2xl mb-14">
-              Ya sea como equipo integrado a su operación o mediante
-              intervenciones con alcance definido, el rigor técnico y el
-              compromiso con los resultados es el mismo.
+              Ya sea como equipo integrado a su operación o mediante intervenciones con alcance definido. El rigor técnico y el compromiso con los resultados es el mismo.
             </p>
 
             <div className="grid md:grid-cols-2 gap-8">
@@ -652,15 +656,16 @@ export default function SupplyChainPage() {
                   </h3>
                   <p className="text-sm text-white leading-relaxed mb-8">
                     Equipos de catalogación e ingeniería de materiales integrados
-                    a su operación. Procesamos altas, modificaciones y depuración
-                    continua de su maestro con la calidad de un área
-                    especializada y la escala que necesita.
+                    a su operación. Procesamos grandes cantidades de creaciones,
+                    modificaciones y depuraciones continuas de su maestro de
+                    materiales con la calidad de un área especializada y la
+                    escala que necesita.
                   </p>
                   <ul className="space-y-3">
                     {[
                       "Catalogación industrial continua",
                       "Ingeniería de materiales integrada",
-                      "Gestión de altas y modificaciones",
+                      "Gestión de grandes cantidades de modificaciones",
                       "Control de calidad de datos maestros",
                     ].map((item, i) => (
                       <li

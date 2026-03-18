@@ -21,7 +21,6 @@ const businessAreas = [
     description:
       "Ingeniería especializada para garantizar la Mantenibilidad y Confiabilidad de sus activos a lo largo de todo su ciclo de vida.",
     features: [
-      "Análisis RAM y RCM",
       "Implementación ERP",
       "Planes de Mantenimiento",
       "Ingeniería de Confiabilidad",
@@ -115,8 +114,26 @@ export default function HomePage() {
 
   return (
     <div className="min-h-screen bg-white">
+      <style>{`
+        @keyframes marquee {
+          0% { transform: translateX(0); }
+          100% { transform: translateX(-25%); }
+        }
+        .animate-marquee {
+          animation: marquee 30s linear infinite;
+          will-change: transform;
+        }
+        .animate-marquee:hover {
+          animation-play-state: paused;
+        }
+        .clients-track {
+          -webkit-mask-image: linear-gradient(to right, transparent 0%, black 12%, black 88%, transparent 100%);
+          mask-image: linear-gradient(to right, transparent 0%, black 12%, black 88%, transparent 100%);
+        }
+      `}</style>
+
       {/* Hero */}
-      <section className="relative min-h-[85vh] flex items-center pt-20 overflow-hidden">
+      <section className="relative min-h-screen flex items-center pt-20 overflow-hidden">
         {/* Background */}
         <div className="absolute inset-0 bg-gradient-to-br from-stone-50 via-white to-blue-50/30">
           <div className="absolute top-0 right-0 w-[800px] h-[800px] bg-gradient-to-br from-blue-400/10 to-transparent rounded-full blur-[120px]" />
@@ -126,14 +143,14 @@ export default function HomePage() {
 
         <div className="relative z-10 container mx-auto px-4 sm:px-6 lg:px-8 pt-8 pb-20 flex flex-col">
           <div className="flex items-center justify-center">
-            <div className="max-w-3xl mx-auto text-center">
+            <div className="max-w-5xl mx-auto text-center">
               <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-white/80 border border-gray-200 mb-10">
                 <span className="text-xs font-medium text-gray-400 tracking-widest uppercase">
                   Gestión de Activos · Materiales · Documentación
                 </span>
               </div>
 
-              <h1 className="text-3xl sm:text-4xl lg:text-[2.75rem] font-bold text-gray-900 mb-8 leading-[1.15]">
+              <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-gray-900 mb-8 leading-[1.1]">
                 Capacidad técnica especializada para{" "}
                 <span className="bg-gradient-to-r from-blue-600 via-cyan-600 to-emerald-600 bg-clip-text text-transparent">
                   operaciones que no se detienen
@@ -141,7 +158,7 @@ export default function HomePage() {
               </h1>
 
               <p className="text-base text-gray-500 mb-8 leading-relaxed max-w-xl mx-auto">
-                Nos integramos a las operaciones más exigentes de la industria minera e industrial. Aportamos conocimiento profundo, metodología probada y la capacidad de dejar cada proceso mejor de lo que lo encontramos.
+                Nos integramos a las operaciones más exigentes de la industria intensiva en activos. Aportamos conocimiento profundo, metodología probada y la capacidad de dejar cada proceso mejor de lo que lo encontramos.
               </p>
 
               <div className="flex flex-col sm:flex-row justify-center gap-3">
@@ -162,7 +179,8 @@ export default function HomePage() {
             </div>
           </div>
 
-          {/* Key Figures */}
+          {/* Key Figures — comentado para revisar KPIs acumulativos */}
+          {/*
           <div className="max-w-4xl mx-auto mt-14 grid grid-cols-3 divide-x divide-gray-200">
             {[
               { number: "+30", label: "Años de experiencia" },
@@ -177,6 +195,7 @@ export default function HomePage() {
               </div>
             ))}
           </div>
+          */}
         </div>
       </section>
 
@@ -428,7 +447,7 @@ export default function HomePage() {
             </h2>
             <p className="text-base text-gray-500 leading-relaxed max-w-2xl mb-14">
               Ya sea como capacidad integrada a su operación o mediante
-              proyectos con alcance definido, el estándar técnico y el
+              proyectos con alcance definido. El estándar técnico y el
               compromiso con los resultados es el mismo.
             </p>
 
@@ -478,8 +497,8 @@ export default function HomePage() {
                   Proyectos Específicos
                 </h3>
                 <p className="text-sm text-gray-500 leading-relaxed mb-8">
-                  Intervenciones puntuales con inicio, plazo y entregable
-                  definido. Resultados concretos que resuelven desafíos técnicos
+                  Intervenciones puntuales con inicio, plazo y entregables
+                  definidos. Resultados concretos que resuelven desafíos técnicos
                   acotados con precisión.
                 </p>
                 <ul className="space-y-3">
@@ -507,7 +526,7 @@ export default function HomePage() {
       {/* Clients Section */}
       <section
         id="clientes"
-        className="py-24 bg-gradient-to-br from-gray-50 to-white"
+        className="py-24 bg-gradient-to-br from-gray-50 to-white overflow-hidden"
       >
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center max-w-3xl mx-auto mb-16">
@@ -523,21 +542,25 @@ export default function HomePage() {
             </p>
           </div>
 
-          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-8 max-w-5xl mx-auto">
-            {clients.map((client, index) => (
-              <div
-                key={index}
-                className="flex items-center justify-center p-6 bg-white rounded-2xl border border-gray-100 hover:shadow-lg hover:border-gray-200 transition-all duration-300"
-              >
-                <Image
-                  src={client.logo}
-                  alt={client.name}
-                  width={120}
-                  height={60}
-                  className="h-12 w-auto object-contain grayscale hover:grayscale-0 transition-all duration-300"
-                />
-              </div>
-            ))}
+          {/* Marquee carousel */}
+          <div className="clients-track w-full overflow-hidden py-4">
+            <div className="flex animate-marquee">
+              {[...clients, ...clients, ...clients, ...clients].map((client, index) => (
+                <div
+                  key={index}
+                  className="group flex-shrink-0 flex items-center justify-center mx-4 p-6 bg-white rounded-2xl border border-gray-100 hover:shadow-lg hover:border-gray-200 transition-all duration-300"
+                  style={{ width: "180px", height: "96px" }}
+                >
+                  <Image
+                    src={client.logo}
+                    alt={client.name}
+                    width={120}
+                    height={60}
+                    className="h-12 w-auto object-contain grayscale group-hover:grayscale-0 transition-all duration-300"
+                  />
+                </div>
+              ))}
+            </div>
           </div>
         </div>
       </section>
